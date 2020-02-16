@@ -1,25 +1,62 @@
-
-
 .my-container {
-text-align: center;
+    text-align: center;
 }
 
 .my-col-1 {
-background-color: rgb(68, 66, 66);
-color: white;
+    background-color: rgb(182, 223, 241);
+    color: rgb(15, 112, 238);
 }
 .search-col {
-background-color: rgb(238, 234, 234);
-height: 675px;
+    background-color: rgb(238, 234, 234);
+    height: 675px;
+}
+
+.list-group-item {
+    padding: 1.75rem 1.25rem;
 }
 
 .city-col {
-background-color: white;
-height: 375px;
+    background-color: white;
+    height: 375px;
+    border: solid 1px rgb(182, 223, 241);
 }
 
-.forecast-col {
-background-color: white;
-height: 300px;
+.forecast-row {
+    background-color: white;
+    height: 35px;
 }
 
+.forecast-col1 {
+    border: solid rgb(182, 223, 241);
+    height: 242px;
+    background-color: rgb(182, 223, 241);
+    border-radius: 15px;
+}
+
+.forecast-col2 {
+    border: solid rgb(182, 223, 241);
+    height: 242px;
+    background-color: rgb(182, 223, 241);
+    border-radius: 15px;
+}
+
+.forecast-col3 {
+    border: solid rgb(182, 223, 241);
+    height: 242px;
+    background-color: rgb(182, 223, 241);
+    border-radius: 15px;
+}
+
+.forecast-col4 {
+    border: solid rgb(182, 223, 241);
+    height: 242px;
+    background-color: rgb(182, 223, 241);
+    border-radius: 15px;
+}
+
+.forecast-col5 {
+    border: solid rgb(182, 223, 241);
+    height: 242px;
+    background-color: rgb(182, 223, 241);
+    border-radius: 15px;
+}
