@@ -1,0 +1,33 @@
+
+body {
+margin: auto;
+}
+.my-container {
+text-align: center;
+}
+
+.my-row-1 {
+border: 1px solid gray;
+
+}
+
+.my-col-1 {
+border: 1px solid gray;
+background-color: rgb(51, 48, 48);
+color: white;
+}
+
+
+.my-row-2 {
+
+}
+
+.my-col-2 {
+height: 600px;
+background-color: rgb(248, 244, 244);
+}
+
+.my-col-3 {
+height: 325px;
+background-color: rgb(248, 244, 244);
+}
