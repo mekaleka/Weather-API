@@ -9,14 +9,22 @@
 // 6fa0cfaeeef5ac6923a4ec8f2b209eff
 
 
+//API key
+var APIKey = "6fa0cfaeeef5ac6923a4ec8f2b209eff";
 
-var APIKey =
+//URL that I need to query/access the database.
+var queryURL = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=" + APIKey;
 
-var queryURL =
-
+//ajax call to queryURL.
 $.ajax({
     url: queryURL,
     method: "GET"
 }).then(function(response) {
+console.log(response);
+});
+
+
+//Will store all of the retreived data inside an object called "response".
+.then(function(response) {
 
 });
