@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <!--Head tag contains all of the meta data links, jQuery link and css link-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -13,21 +14,26 @@
 </head>
 
 <body>
+    <!--Here is the container that holds all the elements that will display the weather search and results-->
     <div class="container-fluid my-container">
+        <!--This is the Weather Dashboard Header-->
         <div class="row row-1 my-row1">
             <div class="col-12 my-col-1">
                 <h1>Weather Dashboard</h1>
             </div>
         </div>
-
+        <!--This row contains rows and columns that show the search content, current city displayed and 5 day forecast-->
         <div class="row search-row">
+            <!--This column contains the city search bar form and list group-->
             <div class="col-3 search-col">
                 <h4>Search for a City:</h4>
+
                 <form class="form-inline md-form mr-auto mb-4">
                     <form class="form-inline md-form mr-auto mb-4">
-                        <input class="form-control Search-btn mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <input class="form-control Search-btn mr-sm-2" type="text" placeholder="Enter City name here" aria-label="Search">
                         <button class="btn search-btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
                     </form>
+                    <!--Here is where the cities will be saved that have been searched-->
                     <ul class="list-group">
                         <li class="list-group-item"></li>
                         <li class="list-group-item"></li>
@@ -39,11 +45,13 @@
                         <li class="list-group-item"></li>
                     </ul>
             </div>
+            <!--Created a row for the current city displayed-->
             <div class="col-9 city-row">
                 <div class="row city-col">
 
                 </div>
                 <br>
+                <!--This row contains the 5 day forcast blocks-->
                 <div class="row forecast-row">
                     <h3>5 Day Forecast:</h3>
                 </div>
@@ -67,7 +75,7 @@
         </div>
     </div>
 
-
+    <!--Here is where JavaScript is linked-->
     <script src="javascript.js"></script>
 
 </body>
