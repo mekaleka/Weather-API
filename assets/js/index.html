@@ -30,8 +30,11 @@
 
                 <form class="form-inline md-form mr-auto mb-4">
                     <form class="form-inline md-form mr-auto mb-4">
-                        <input class="form-control Search-btn mr-sm-2" type="text" placeholder="Enter City name here" aria-label="Search">
-                        <button class="btn search-btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
+                        <input id="imputField" class="form-control Search-btn mr-sm-2" type="text"
+                            placeholder="Enter City name here" aria-label="Search">
+                        <!--This btn will be used to trigger the ajax call-->
+                        <button id="searchBtn" class="btn search-btn aqua-gradient btn-rounded btn-sm my-0"
+                            type="submit">Search</button>
                     </form>
                     <!--Here is where the cities will be saved that have been searched-->
                     <ul class="list-group">
@@ -47,7 +50,11 @@
             </div>
             <!--Created a row for the current city displayed-->
             <div class="col-9 city-row">
-                <div class="row city-col">
+
+
+                
+                <!--Edit this to correct the layout class="row city-col -->
+                <div id="cityResults">
 
                 </div>
                 <br>
@@ -55,21 +62,8 @@
                 <div class="row forecast-row">
                     <h3>5 Day Forecast:</h3>
                 </div>
-                <div class="row justify-content-around">
-                    <div class="col-2 forecast-col1">
-
-                    </div>
-                    <div class="col-2 forecast-col2">
-
-                    </div>
-                    <div class="col-2 forecast-col3">
-
-                    </div>
-                    <div class="col-2 forecast-col4">
-
-                    </div>
-                    <div class="col-2 forecast-col5">
-                    </div>
+                <div id="forecast" class="row justify-content-around">
+                   
                 </div>
             </div>
         </div>
