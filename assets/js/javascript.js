@@ -19,8 +19,10 @@ var APIKey = "6fa0cfaeeef5ac6923a4ec8f2b209eff";
 // console.log(response);
 // });
 
+
 //This .on("click") function will trigger an ajax call
 $("#searchBtn").on("click", function(event) {
+    //preventDefault stops the default action.
   event.preventDefault();
   var searchContent = $("#imputField").val();
   currentForecast(searchContent);
@@ -29,13 +31,17 @@ $("#searchBtn").on("click", function(event) {
     searchContent +
     "&APPID=" +
     APIKey;
+
   //ajax call to queryURL.
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET"//
   }).then(function(response) {
+      //console log function response/ajax call to get weather data to be displayed. 
     console.log(response);
+    //for loop through forecast data linked to id=forecast. 
     for (let i = 0; i < response.list.length; i = i + 8) {
+        //append data to id=forecast to show weather forecast with h3 tag, weather icon, weather date with a split for date and time, temp, humidity and mph in <p> tags.  
       $("#forecast").append(`<div class="col-2 forecast-col1">
     <h3>${response.list[i].weather[0].main}</h3>
     <img src="http://openweathermap.org/img/w/${
@@ -49,6 +55,7 @@ $("#searchBtn").on("click", function(event) {
     }
   });
 });
+//Function access url with ajax call and waits for a response. 
 function currentForecast(searchContent) {
   var queryURL =
     "http://api.openweathermap.org/data/2.5/weather?q=" +
@@ -61,13 +68,14 @@ function currentForecast(searchContent) {
     url: queryURL,
     method: "GET"
   }).then(function(response) {
+      //console log response to see retreived data.
     console.log(response);
+    //append city data to cityResults for current weather conditions. 
     $("#cityResults").append(`
     <h3>Today's Forecast${response.weather[0].main}</h3>
    <img src="http://openweathermap.org/img/w/${response.weather[0].icon}.png"
     <p>Temperature:${response.main.temp}°F</p>
     <p>Humidity:${response.main.humidity}%</p>
-     <p>MPH:${response.wind.speed}mph</p>
-`);
+     <p>MPH:${response.wind.speed}mph</p>`);
   });
 }
