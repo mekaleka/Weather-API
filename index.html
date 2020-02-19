@@ -9,7 +9,7 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
 
@@ -31,29 +31,29 @@
                 <form class="form-inline md-form mr-auto mb-4">
                     <form class="form-inline md-form mr-auto mb-4">
                         <input id="imputField" class="form-control Search-btn mr-sm-2" type="text"
-                            placeholder="Enter City name here" aria-label="Search">
+                            placeholder="Enter City name here" id="impValue" aria-label="Search">
                         <!--This btn will be used to trigger the ajax call-->
                         <button id="searchBtn" class="btn search-btn aqua-gradient btn-rounded btn-sm my-0"
                             type="submit">Search</button>
                     </form>
                     <!--Here is where the cities will be saved that have been searched-->
                     <ul class="list-group">
-                        <li class="list-group-item"></li>
-                        <li class="list-group-item"></li>
-                        <li class="list-group-item"></li>
-                        <li class="list-group-item"></li>
-                        <li class="list-group-item"></li>
-                        <li class="list-group-item"></li>
-                        <li class="list-group-item"></li>
-                        <li class="list-group-item"></li>
+                        <li id="savedCity1" class="list-group-item"></li>
+                        <li id="savedCity2" class="list-group-item"></li>
+                        <li id="savedCity3" class="list-group-item"></li>
+                        <li id="savedCity4" class="list-group-item"></li>
+                        <li id="savedCity5" class="list-group-item"></li>
+                        <li id="savedCity6" class="list-group-item"></li>
+                        <li id="savedCity7" class="list-group-item"></li>
+                        <li id="savedCity8" class="list-group-item"></li>
                     </ul>
             </div>
             <!--Created a row for the current city displayed-->
             <div class="col-9 city-row">
 
 
-                
-                <!--Edit this to correct the layout class="row city-col -->
+
+                <!--Edit this to correct the layout class="row city-col in jQuery -->
                 <div id="cityResults">
 
                 </div>
@@ -63,14 +63,14 @@
                     <h3>5 Day Forecast:</h3>
                 </div>
                 <div id="forecast" class="row justify-content-around">
-                   
+
                 </div>
             </div>
         </div>
     </div>
 
     <!--Here is where JavaScript is linked-->
-    <script src="javascript.js"></script>
+    <script src="assets/js/javascript.js"></script>
 
 </body>
 
