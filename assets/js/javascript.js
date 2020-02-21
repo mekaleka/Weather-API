@@ -1,20 +1,27 @@
-// Weather Homework URLS:
-// Current Weather:  "http://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=7ba67ac190f85fdba2e2dc6b9d32e93c&units=imperial"
-// Forecast: "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=7ba67ac190f85fdba2e2dc6b9d32e93c&units=imperial"
-// Icon: "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png" 
-
+//Need to complete the localStorage so the cities are saved into the list group. 
+var cities = localStorage.getItem("cities");
+if (cities) {
+  cities = JSON.parse(cities);
+} else {
+  cities = [];
+}
+console.log(cities);
 
 //API key
 var APIKey = "6fa0cfaeeef5ac6923a4ec8f2b209eff";
 
 //This .on("click") function will trigger an ajax call
 $("#searchBtn").on("click", function(event) {
-    //preventDefault stops the default action.
+  //preventDefault stops the default action.
   event.preventDefault();
   var searchContent = $("#imputField").val();
+
+  cities.push(searchContent);
+  localStorage.setItem("cities", JSON.stringify(cities));
+  
   currentForecast(searchContent);
   var queryURL =
-    "http://api.openweathermap.org/data/2.5/forecast?q=" +
+    "https://api.openweathermap.org/data/2.5/forecast?units=imperial&q=" +
     searchContent +
     "&APPID=" +
     APIKey;
@@ -24,13 +31,15 @@ $("#searchBtn").on("click", function(event) {
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-      //console log function response/ajax call to get weather data to be displayed. 
+    //console log function response/ajax call to get weather data to be displayed.
     console.log(response);
     $("#forecast").empty();
-    //for loop through forecast data linked to id=forecast. 
+    //for loop through forecast data linked to id=forecast.
     for (let i = 0; i < response.list.length; i = i + 8) {
-        //append data to id=forecast to show weather forecast with h3 tag, weather icon, weather date with a split for date and time, temp, humidity and mph in <p> tags.  
-         // var $div = $("<div>")
+      //commented below is another way to create this function...
+
+      //append data to id=forecast to show weather forecast with h3 tag, weather icon, weather date with a split for date and time, temp, humidity and mph in <p> tags.
+      // var $div = $("<div>")
       //   .addClass("col-2 forecast-col1")
       //   .append(
       //     $("<h3>").text(response.list[i].weather[0].main),
@@ -53,7 +62,7 @@ $("#searchBtn").on("click", function(event) {
     }
   });
 });
-//Function access url with ajax call and waits for a response. 
+//Function access url with ajax call and waits for a response.
 function currentForecast(searchContent) {
   var queryURL =
     "http://api.openweathermap.org/data/2.5/weather?q=" +
@@ -66,10 +75,10 @@ function currentForecast(searchContent) {
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-      //console log response to see retreived data.
+    //console log response to see retreived data.
     console.log(response);
     $("#cityResults").empty();
-    //append city data to cityResults for current weather conditions. 
+    //append city data to cityResults for current weather conditions.
     $("#cityResults").append(`
     <h3>Today's Forecast${response.weather[0].main}</h3>
    <img src="http://openweathermap.org/img/w/${response.weather[0].icon}.png"
@@ -78,15 +87,3 @@ function currentForecast(searchContent) {
      <p>MPH:${response.wind.speed}mph</p>`);
   });
 }
-
-
-const inpValue = document.getElementById("inpValue");
-const searchBtn = document.getElementById("searchBtn");
-const savedCity1 = document.getElementById("savedCity");
-
-searchBtn.onclick = function () {
-  const value = searchBtn.value;
-
-  console.log(savedCity1);
-}
-
