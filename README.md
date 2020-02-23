@@ -1,5 +1,5 @@
 # weather-tracker-app
-https://user-images.githubusercontent.com/58678985/75116519-73d05300-5626-11ea-8449-ac15d08e0ae7.png
+![github-med](https://user-images.githubusercontent.com/58678985/75116519-73d05300-5626-11ea-8449-ac15d08e0ae7.png)
 This is an app that allows the user to imput a city into a search field and pull up the current weather. Then the user can also view
 the five day forecast and save that city for the future. I enjoy making apps like this. By suing an api key I am able to access data
 from around the world to help the user access the data they need. I learned that there is a lot of different types of information 
