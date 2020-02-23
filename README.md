@@ -1,4 +1,4 @@
-# weather-tracker-app
+# Weather Tracker App
 
 ![github-med](https://user-images.githubusercontent.com/58678985/75116519-73d05300-5626-11ea-8449-ac15d08e0ae7.png)
 
