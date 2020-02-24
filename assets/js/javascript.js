@@ -106,7 +106,7 @@ function forecastFive(searchContent) {
       //   );
       $("#forecast").append(`<div class="col-2 forecast-col1">
   <h3>${response.list[i].weather[0].main}</h3>
-  <img src="http://openweathermap.org/img/w/${
+  <img src="https://openweathermap.org/img/w/${
     response.list[i].weather[0].icon
   }.png">
   <h3>${response.list[i].dt_txt.split(" ")[0]}</h3>
@@ -136,7 +136,7 @@ function currentForecast(searchContent) {
     //append city data to cityResults for current weather conditions.
     $("#cityResults").append(`
     <h3>Today's Forecast${response.weather[0].main}</h3>
-   <img src="http://openweathermap.org/img/w/${response.weather[0].icon}.png"
+   <img src="https://openweathermap.org/img/w/${response.weather[0].icon}.png"
     <p>Temperature:${response.main.temp}°F</p>
     <p>Humidity:${response.main.humidity}%</p>
      <p>MPH:${response.wind.speed}mph</p>`);
