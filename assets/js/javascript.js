@@ -120,7 +120,7 @@ function forecastFive(searchContent) {
 //Function access url with ajax call and waits for a response.
 function currentForecast(searchContent) {
   var queryURL =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
     searchContent +
     "&appid=" +
     APIKey +
