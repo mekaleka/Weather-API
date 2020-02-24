@@ -1,0 +1,75 @@
+.my-container {
+    text-align: center;
+}
+
+.my-col-1 {
+    background-color: rgb(182, 223, 241);
+    color: black;
+}
+
+.search-btn {
+    color: rgb(15, 112, 238);
+    background-color: rgb(182, 223, 241);
+    box-shadow: 0 0.2rem 0.8rem 0 rgb(182, 223, 241);
+}
+.search-col {
+    background-color: rgb(238, 234, 234);
+    height: 675px;
+}
+
+.list-group-item {
+    padding: 1.75rem 1.25rem;
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(182, 223, 241);
+}
+
+.city-col {
+    background-color: white;
+    height: 375px;
+    border: solid 1px rgb(182, 223, 241);
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(182, 223, 241);
+}
+
+.forecast-row {
+    background-color: white;
+    height: 35px;
+}
+
+.forecast-col1 {
+    border: solid rgb(182, 223, 241);
+    height: 242px;
+    background-color: rgb(182, 223, 241);
+    border-radius: 15px;
+    box-shadow: 0 0.2rem 0.8rem 0 rgb(182, 223, 241);
+}
+
+.forecast-col2 {
+    border: solid rgb(182, 223, 241);
+    height: 242px;
+    background-color: rgb(182, 223, 241);
+    border-radius: 15px;
+    box-shadow: 0 0.2rem 0.8rem 0 rgb(182, 223, 241);
+}
+
+.forecast-col3 {
+    border: solid rgb(182, 223, 241);
+    height: 242px;
+    background-color: rgb(182, 223, 241);
+    border-radius: 15px;
+    box-shadow: 0 0.2rem 0.8rem 0 rgb(182, 223, 241);
+}
+
+.forecast-col4 {
+    border: solid rgb(182, 223, 241);
+    height: 242px;
+    background-color: rgb(182, 223, 241);
+    border-radius: 15px;
+    box-shadow: 0 0.2rem 0.8rem 0 rgb(182, 223, 241);
+}
+
+.forecast-col5 {
+    border: solid rgb(182, 223, 241);
+    height: 242px;
+    background-color: rgb(182, 223, 241);
+    border-radius: 15px;
+    box-shadow: 0 0.2rem 0.8rem 0 rgb(182, 223, 241);
+}
